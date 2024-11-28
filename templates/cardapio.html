@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio | Duett Burguer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/cardapio.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/sobre">Sobre</a></li>
+                <li><a href="/contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="cardapio">
+        <div class="container">
+            <h1>Nosso Cardápio</h1>
+            <div class="grid">
+                <!-- Card 1 -->
+                <div class="card">
+                    <img src="{{ url_for('static', filename='img/classico.jpg') }}" alt="Hambúrguer Clássico">
+                    <h2>Hambúrguer Clássico</h2>
+                    <p>R$ 25,00</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="card">
+                    <img src="{{ url_for('static', filename='img/bacon.jpg') }}" alt="Hambúrguer Bacon Especial">
+                    <h2>Bacon Especial</h2>
+                    <p>R$ 30,00</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="card">
+                    <img src="{{ url_for('static', filename='img/vegano.png') }}" alt="Hambúrguer Vegano">
+                    <h2>Hambúrguer Vegano</h2>
+                    <p>R$ 28,00</p>
+                </div>
+                <!-- Card 4 -->
+                <div class="card">
+                    <img src="{{ url_for('static', filename='img/cheddar.jpg') }}" alt="Cheddar Supreme">
+                    <h2>Cheddar Supreme</h2>
+                    <p>R$ 32,00</p>
+                </div>
+                <!-- Card 5 -->
+                <div class="card">
+                    <img src="{{ url_for('static', filename='img/picanha.jpg') }}" alt="Picanha Premium">
+                    <h2>Picanha Premium</h2>
+                    <p>R$ 31,90</p>
+                </div>
+                <!-- Card 6 -->
+                <div class="card">
+                    <img src="{{ url_for('static', filename='img/spicy.png') }}" alt="Spicy Inferno">
+                    <h2>Spicy Inferno</h2>
+                    <p>R$ 26,90</p>
+                </div>
+                <!-- Card 7 -->
+                <div class="card">
+                    <img src="{{ url_for('static', filename='img/fraldinha.png') }}" alt="Fraldinha Gourme">
+                    <h2>Fraldinha Gourmet</h2>
+                    <p>R$ 30,90</p>
+                </div>
+                <!-- Card 8 -->
+                <div class="card">
+                    <img src="{{ url_for('static', filename='img/mediterraneo.jpg') }}" alt="Mediterrâneo Fit">
+                    <h2>Mediterrâneo Fit</h2>
+                    <p>R$ 22,90</p>
+                </div>
+                <!-- Card 9 -->
+                <div class="card">
+                    <img src="{{ url_for('static', filename='img/peperoni.jpg') }}" alt="Hot Peperoni">
+                    <h2>Hot Peperoni</h2>
+                    <p>R$ 26,90</p>
+                </div>
+                <!-- Card 10 -->
+                <div class="card">
+                    <img src="{{ url_for('static', filename='img/golden.jpg') }}" alt="Golden Crispy Chicken">
+                    <h2>Golden Crispy Chicken</h2>
+                    <p>R$ 26,90</p>
+                </div>
+                <!-- Card 11 -->
+                <div class="card">
+                    <img src="{{ url_for('static', filename='img/veggie.jpeg') }}" alt="Veggie Supreme">
+                    <h2>Veggie Supreme</h2>
+                    <p>R$ 19,90</p>
+                </div>
+                <!-- Card 12 -->
+                <div class="card">
+                    <img src="{{ url_for('static', filename='img/truffle.jpg') }}" alt="Truffle Deligh">
+                    <h2>Truffle Delight</h2>
+                    <p>R$ 34,90</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Duett Burguer | Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

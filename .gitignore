@@ -1,0 +1,18 @@
+# Ignorar a pasta da virtualenv
+.venv/
+
+# Arquivos Python compilados
+*.pyc
+__pycache__/
+
+# Logs e bancos de dados temporários
+*.log
+*.sqlite3
+
+# Configurações do sistema operacional
+.DS_Store
+Thumbs.db
+
+# Configurações de IDEs
+.idea/
+.vscode/

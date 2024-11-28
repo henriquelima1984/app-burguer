@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Administrativo</title>
+    <link rel="stylesheet" href="/static/css/admin.css">
+</head>
+<body>
+    <header>
+        <h1>Painel Administrativo</h1>
+        <button class="logout" onclick="location.href='/logout'">Sair</button>
+    </header>
+    <div class="container">
+        <h2>Gerenciar Usuários</h2>
+        <a href="{{ url_for('criar_usuario_admin') }}" class="btn create">Criar Novo Usuário</a>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Email</th>
+                    <th>Tipo</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for user in users %}
+                <tr>
+                    <td>{{ user.nome }}</td>
+                    <td>{{ user.email }}</td>
+                    <td>{{ user.role | capitalize }}</td>
+                    <td>
+                        <a href="{{ url_for('editar_usuario', user_id=user._id) }}" class="btn edit">Editar</a>
+                        <form action="{{ url_for('deletar_usuario', user_id=user._id) }}" method="POST" style="display:inline;">
+                            <button type="submit" class="btn delete">Deletar</button>
+                        </form>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

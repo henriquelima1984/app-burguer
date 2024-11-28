@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duett Burger</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+
+    <!--box icons link-->
+    <link rel="stylesheet"
+  href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+  <!--remix icons link-->
+  <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"/>
+
+    <!--google fonts link-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Kaushan+Script&family=
+    Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Work+Sans:ital,
+    wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,
+    900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+
+    <!--header-->
+    <header>
+        <a href="{{ url_for('home') }}" class="logo">
+            <img src="{{ url_for('static', filename='img/logoduett.png') }}" alt="Logo">
+        </a>
+
+        <ul class="navlist">
+            <li><a href="{{ url_for('sobre') }}">Sobre</a></li>
+            <li><a href="{{ url_for('cardapio') }}">Cardápio</a></li>
+            <li><a href="{{ url_for('contato') }}">Contato</a></li>
+        </ul>
+
+        <div class="right-content">
+            {% if session.get('user_id') %}
+                <!-- Botão de logout visível se o usuário estiver logado -->
+                <a href="{{ url_for('logout') }}" class="nav-btn logout-btn">Sair</a>
+            {% else %}
+                <!-- Botão de login visível se o usuário não estiver logado -->
+                <a href="{{ url_for('login') }}" class="nav-btn">Login</a>
+            {% endif %}
+        <div class="bx bx-menu" id="menu-icon"></div>
+    </div>
+
+    </header>
+
+    <!--hero-->
+    <section class="hero">
+        <div class="hero-text">
+            <h5 data-aos="fade-right" data-aos-duration="1400">#A cada mordida, uma explosão de sabor
+            </h5>
+            <h1 data-aos="zoom-in-left" data-aos-duration="1400" data-aos-delay="200">-Big Burger</h1>
+            <p data-aos="fade-right" data-aos-duration="1400" data-aos-delay="300">Perfeito para quem ama hambúrguer de verdade!</p>
+
+            <div class="main-hero" data-aos="flip-down" data-aos-duration="1400" data-aos-delay="400">
+                {% if session.get('user_id') %}
+                    <a href="{{ url_for('cardapio') }}" class="btn">Peça Agora</a>
+                    <a href="{{ url_for('cardapio') }}" class="price">
+                        R$39.90 | <span>Valor Promocional</span>
+                    </a>
+                {% else %}
+                    <a href="{{ url_for('login') }}" class="btn">Peça Agora</a>
+                    <a href="{{ url_for('login') }}" class="price">
+                        R$39.90 | <span>Valor Promocional</span>
+                    </a>
+                {% endif %}
+            </div>
+        </div>
+
+        <div class="hero-img" data-aos="zoom-in" data-aos-duration="1400">
+            <img src="{{ url_for('static', filename='img/hubg.png') }}" alt="Imagem do Hambúrguer">
+        </div>
+    </section>
+
+    <!--js link-->
+    <script src="/static/js/script.js"></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        offset: 1,
+      });
+    </script>
+    
+</body>
+</html>

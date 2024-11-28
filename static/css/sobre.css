@@ -1,0 +1,104 @@
+/* Resetando estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+/* Header e navegação */
+header {
+    background-color: #333;
+    padding: 10px 0;
+}
+
+header nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Seção Sobre */
+.sobre {
+    padding: 50px 20px;
+    background-color: #fff;
+}
+
+.sobre .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.sobre h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #e67e22; /* Exemplo de cor vibrante */
+}
+
+.sobre p, .sobre ul {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+.sobre h2 {
+    font-size: 1.8rem;
+    color: #e67e22;
+    margin-top: 30px;
+}
+
+.sobre ul {
+    margin-left: 20px;
+}
+
+.sobre ul li {
+    margin-bottom: 15px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 50px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .sobre h1 {
+        font-size: 2rem;
+    }
+
+    .sobre h2 {
+        font-size: 1.5rem;
+    }
+
+    header nav ul {
+        flex-direction: column;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    .sobre {
+        padding: 20px;
+    }
+}

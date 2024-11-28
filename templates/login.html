@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duett Burger - Login</title>
+    <link rel="stylesheet" href="/static/css/login_cadastro.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="go-back-top">
+        <a href="{{ url_for('home') }}" class="btn-back">Voltar para a Home</a>
+    </div>
+    <div class="container">
+        <div class="form-box">
+            <form action="{{ url_for('login') }}" method="POST">
+                <h1>Login</h1>
+                <div class="input-box">
+                    <input type="email" name="email" placeholder="Email" required>
+                    <i class='bx bxs-envelope'></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" name="senha" placeholder="Senha" required>
+                    <i class='bx bxs-lock-alt'></i>
+                </div>
+                <div class="forgot-link">
+                    <a href="#">Esqueceu sua senha?</a>
+                </div>
+                <button type="submit" class="btn">Entrar</button>
+                <p>Não possui conta? <a href="/cadastrar">Cadastre-se</a></p>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

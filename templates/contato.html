@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Duett Burguer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/contato.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="{{ url_for('home')}}" class="logo">Duett Burguer</a>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/cardapio">Cardápio</a></li>
+                <li><a href="/sobre">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact">
+            <div class="container">
+                <!-- Formulário no topo -->
+                <form class="contact-form">
+                    <h1>Entre em contato</h1>
+                    <p>Envie sua mensagem para nós! Estamos aqui para ajudar.</p>
+
+                    <label for="name">Nome</label>
+                    <input type="text" id="name" name="name" placeholder="Digite seu nome" required>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Digite seu email" required>
+
+                    <label for="message">Mensagem</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Digite sua mensagem" required></textarea>
+
+                    <button type="submit">Enviar</button>
+                </form>
+
+                <!-- Canais de atendimento na parte inferior -->
+                <div class="contact-info">
+                    <h2>Nossos canais de atendimento</h2>
+                    <div class="info-item">
+                        <h3>Telefone</h3>
+                        <p>(85) 98765-4321</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>Email</h3>
+                        <p>contato@duettburguer.com</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>Endereço</h3>
+                        <p>Rua dos Hambúrgueres, 123 - Centro, Fortaleza</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Duett Burguer. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
