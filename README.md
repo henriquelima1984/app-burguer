@@ -10,6 +10,7 @@ Antes de começar, certifique-se de ter o seguinte:
 
 - **Python** (versão 3.8 ou superior)
 - Gerenciador de pacotes **pip**
+- Baixar [Git](https://git-scm.com/downloads) para clonar o repositorio.
 - Uma conta no [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) configurada com um cluster e banco de dados.
 
 ---
@@ -18,8 +19,8 @@ Antes de começar, certifique-se de ter o seguinte:
 
 1. **Clone o repositório:**
    ```bash
-   git clone https://github.com/seu-usuario/seu-repositorio.git
-   cd seu-repositorio
+   git clone https://github.com/henriquelima1984/duett-burguer.git
+   cd duett-burguer
 
 ## 2. Crie e ative um ambiente virtual:<br>
   python -m venv venv<br>
